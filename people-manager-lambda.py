@@ -9,7 +9,7 @@ def lambda_handler(event, context):
     print(event)
     if event['rawPath'] == GET_RAW_PATH:
         print("Start Request for GetPerson")
-        personId = event['queryStringParameters']['personId123']
+        personId = event['queryStringParameters']['personId']
         print(f"Request received with personID: {personId}")
         return ({"firstname": "Jason", "lastname": "Bourne",
                 "email": "email@email.com"})
