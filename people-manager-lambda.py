@@ -16,3 +16,9 @@ def lambda_handler(event, context):
 
     elif event['rawPath'] == CREATE_RAW_PATH:
         print("Start request to CreatePerson")
+        decodedEvent = json.loads(event['body'])
+        firstName = decodedEvent['firstName']
+        lastName = decodedEvent['lastName']
+        email = decodedEvent['email']
+        print(
+            f"Received request with firstName: {firstName} lastName: {lastName} and email: {email}")
